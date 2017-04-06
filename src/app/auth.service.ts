@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { tokenNotExpired } from 'angular2-jwt';
-import { environment } from './environment';
 
 // Avoid name not found warnings
 declare var Auth0Lock: any;

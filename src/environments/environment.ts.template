@@ -4,6 +4,7 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
+  production: false,
   auth0ApiKey: '<API_KEY>',
   auth0Domain: '<DOMAIN>',
   auth0CallbackUrl: '<CALLBACK_URL>',
