@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { tokenNotExpired } from 'angular2-jwt';
+import { environment } from '../environments/environment';
 
 // Avoid name not found warnings
 declare var Auth0Lock: any;
@@ -7,7 +8,7 @@ declare var Auth0Lock: any;
 @Injectable()
 export class AuthService {
   // Configure Auth0
-  lock = new Auth0Lock('6HABFFFTOMIDW5uez313OKd01Yvy0Yus', 'tuxin.auth0.com', {});
+  lock = new Auth0Lock(environment.auth0ApiKey, environment.auth0Domain, {});
 
   constructor() {
     // Add callback for lock `authenticated` event
